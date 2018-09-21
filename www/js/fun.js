@@ -2,7 +2,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("device is starting");
 		/*document.getElementById("getPosition").addEventListener("click", getPosition);*/
-		document.getElementById("watchPosition").addEventListener("click", watchPosition);
+		document.getElementById("getlocation").addEventListener("click", watchPositionInfo);
 	};
 
 	/*function getPosition() {
@@ -28,7 +28,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
    }
 }*/
 
-function watchPosition() {
+function watchPositionInfo() {
    var options = {
       maximumAge: 3600000,
       timeout: 3000,
