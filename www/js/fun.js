@@ -3,7 +3,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 		alert("device is starting");
 		document.getElementById("getPosition").addEventListener("click", getPosition);
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
-	}
+	};
 
 	function getPosition() {
    		var options = {
