@@ -1,11 +1,11 @@
 document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("device is starting");
-		//document.getElementById("getPosition").addEventListener("click", getPosition);
-		//document.getElementById("watchPosition").addEventListener("click", watchPosition);
+		document.getElementById("getPosition").addEventListener("click", getPosition);
+		document.getElementById("watchPosition").addEventListener("click", watchPosition);
 	}
 
-	/*function getPosition() {
+	function getPosition() {
    		var options = {
        	enableHighAccuracy: true,
       	maximumAge: 3600000,
