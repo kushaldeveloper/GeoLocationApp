@@ -2,7 +2,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("device is starting");
 		/*document.getElementById("getPosition").addEventListener("click", getPosition);*/
-		document.getElementById("getlocation").addEventListener("click", watchPositionInfo);
+		document.getElementById("watchPosition").addEventListener("click", watchPosition);
 	};
 
 	/*function getPosition() {
@@ -28,7 +28,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
    }
 }*/
 
-function watchPositionInfo() {
+function watchPosition() {
    var options = {
       maximumAge: 3600000,
       timeout: 3000,
@@ -37,7 +37,7 @@ function watchPositionInfo() {
    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
 
    function onSuccess(position) {
-      alert('Latitude: '          + position.coords.latitude          + '\n' +
+      alert('Latitude: '       + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
          'Altitude: '          + position.coords.altitude          + '\n' +
          'Accuracy: '          + position.coords.accuracy          + '\n' +
