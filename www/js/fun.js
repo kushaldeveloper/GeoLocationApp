@@ -4,6 +4,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 		document.getElementById("getPosition").addEventListener("click", getPosition);
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
 	}
+
 	function getPosition() {
    		var options = {
       	enableHighAccuracy: true,
@@ -50,3 +51,15 @@ function watchPosition() {
       alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
    }
 }
+ cordova.plugins.diagnostic.isLocationAuthorized(function(enabled){
+          console.log("Location is " + (enabled ? "enabled" : "disabled"));
+          if(!enabled){
+            cordova.plugins.diagnostic.requestLocationAuthorization(function(status){
+                alert("Authorization status is now: "+status);
+            }, function(error){
+                console.error(error);
+            });
+          }
+      }, function(error){
+          alert("The following error occurred: "+error);
+      });
