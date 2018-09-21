@@ -2,7 +2,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("1234");
 		alert("device is starting");
-		document.getElementById("getPosition").addEventListener("click", getPosition);
+		/*document.getElementById("getPosition").addEventListener("click", getPosition);
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
 	}
 
