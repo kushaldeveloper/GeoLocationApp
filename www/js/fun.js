@@ -1,5 +1,6 @@
 document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
+		alert("1234");
 		alert("device is starting");
 		document.getElementById("getPosition").addEventListener("click", getPosition);
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
@@ -7,17 +8,19 @@ document.addEventListener("deviceready",onDeviceReady,false);
 
 	function getPosition() {
    		var options = {
-      	enableHighAccuracy: true,
+       	enableHighAccuracy: true,
       	maximumAge: 3600000,
    		}
    var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
    function onSuccess(position) {
+   		alert(".....");
       	alert('Latitude: '     + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
         }
 
    function onError(error) {
+   	  alert(".....");
       alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
    }
 }
@@ -31,11 +34,13 @@ function watchPosition() {
    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
 
    function onSuccess(position) {
+   	  alert(".....");
       alert('Latitude: '       + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
    }
 
    function onError(error) {
+   	  alert(".....");
       alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
    }
 }
