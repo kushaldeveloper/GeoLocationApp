@@ -2,7 +2,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("device is starting");
 		document.getElementById("getPosition").addEventListener("click", getPosition);
-		document.getElementById("getPosition").addEventListener("click", watchPosition);
+		document.getElementById("watchPosition").addEventListener("click", watchPosition);
 	}
 	function getPosition() {
    		var options = {
@@ -44,7 +44,7 @@ function watchPosition() {
          'Heading: '           + position.coords.heading           + '\n' +
          'Speed: '             + position.coords.speed             + '\n' +
          'Timestamp: '         + position.timestamp                + '\n');
-   }
+   };
 
    function onError(error) {
       alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
