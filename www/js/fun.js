@@ -3,7 +3,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 		alert("device is starting");
 		document.getElementById("getPosition").addEventListener("click", getPosition);
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
-	};
+	}
 
 	function getPosition() {
    		var options = {
@@ -15,11 +15,11 @@ document.addEventListener("deviceready",onDeviceReady,false);
    function onSuccess(position) {
       	alert('Latitude: '     + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
-        };
+        }
 
    function onError(error) {
       alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
-   };
+   }
 }
 
 function watchPosition() {
@@ -33,10 +33,10 @@ function watchPosition() {
    function onSuccess(position) {
       alert('Latitude: '       + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
-   };
+   }
 
    function onError(error) {
       alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
-   };
+   }
 }
  
