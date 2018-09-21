@@ -1,11 +1,11 @@
 document.addEventListener("deviceready",onDeviceReady,false);
 	function onDeviceReady(){
 		alert("device is starting");
-		document.getElementById("getPosition").addEventListener("click", getPosition);
+		/*document.getElementById("getPosition").addEventListener("click", getPosition);*/
 		document.getElementById("watchPosition").addEventListener("click", watchPosition);
-	}
+	};
 
-	function getPosition() {
+	/*function getPosition() {
    		var options = {
       	enableHighAccuracy: true,
       	maximumAge: 3600000
@@ -26,7 +26,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
    function onError(error) {
       alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
    }
-}
+}*/
 
 function watchPosition() {
    var options = {
@@ -51,15 +51,4 @@ function watchPosition() {
       alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
    }
 }
- cordova.plugins.diagnostic.isLocationAuthorized(function(enabled){
-          console.log("Location is " + (enabled ? "enabled" : "disabled"));
-          if(!enabled){
-            cordova.plugins.diagnostic.requestLocationAuthorization(function(status){
-                alert("Authorization status is now: "+status);
-            }, function(error){
-                console.error(error);
-            });
-          }
-      }, function(error){
-          alert("The following error occurred: "+error);
-      });
+ 
